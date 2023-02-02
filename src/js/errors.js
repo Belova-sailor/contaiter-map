@@ -7,11 +7,11 @@ export default class ErrorRepository {
     if (this.error.has(code)) {
       return this.error.get(code);
     }
-    return "Unknown error";
+    return 'Unknown error';
   }
 }
 
 const newError = new ErrorRepository();
-newError.error.set(400, "");
-newError.error.set(404, "Not Found ");
-newError.error.set(500, "Internal Server Error");
+newError.error.set(400, 'Bad Request');
+newError.error.set(404, 'Not Found ');
+newError.error.set(500, 'Internal Server Error');
